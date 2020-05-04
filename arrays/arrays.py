@@ -70,7 +70,7 @@ cycleMeCopy = list(cycleMe)
 clearJustMe = list(range(1, random.randint(5, 15)))
 keepMe = clearJustMe
 #  Clear all data from 'clearJustMe' without affecting the 'keepMe' reference
-#  so it still points to the original list
+#  so it still points to the original list. Do nothing to 'keepMe'.
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
@@ -89,7 +89,7 @@ keepMe = clearJustMe
 clearAll = list(range(1, random.randint(5, 15)))
 loseMe = clearAll
 #  Clear all data from 'clearAll' and have this affect the 'loseMe' reference
-#  so that it too reference the same emptied list
+#  so that it too reference the same emptied list. Do nothing to 'loseMe'.
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
 
