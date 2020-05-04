@@ -3,7 +3,7 @@
 //  EXERCISE 1 - INITALIZATION
 //
 //  Initialize the 'newArray' variable as any kind of non-empty array
-//  with at least one element in it
+//  literal with at least one element in it
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
@@ -15,7 +15,32 @@ let newArray
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 2 - IS ARRAY
+//  EXERCISE 2 - ARRAY REFERENCES
+//
+//  We have the variable 'array1':
+let array1 = [ "Just", "your", "average", "array" ]
+//  And 'array2' that is assigned the reference of 'array1'
+let array2 = array1
+//  And 'array3' that is assigned a deep copy of 'array1'
+let array3 = JSON.parse(JSON.stringify(array1))
+//  Tasks:
+//  - Change the value of the first element of 'array2' from "Just" to "Not"
+//  - Change the value of the last element of 'array3' from "array" to "copy"
+//  - They will all be printed out in the answers, and you will see how assigning
+//    them by reference vs making a copy of an array affects each variable's output
+//
+////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
+
+array2[0] = "Not"
+array3[array3.length-1] = "copy"
+
+////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////
+//
+//  EXERCISE 3 - IS ARRAY
 //
 //  Check if 'maybeAnArray' is an array and save the result into 'isAnArray'
 let maybeAnArray = generateRandomDataType()
@@ -30,7 +55,7 @@ let isAnArray
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 3 - ARRAY UNSHIFT AND PUSH
+//  EXERCISE 4 - ARRAY UNSHIFT AND PUSH
 //
 //  Add the element "zero" to the begining of the 'growMe' array and add
 //  the element "three" to the end of the 'growMe' array
@@ -46,7 +71,7 @@ let growMe = [ "one", "two" ]
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 4 - ARRAY SHIFT AND POP
+//  EXERCISE 5 - ARRAY SHIFT AND POP
 //
 //  Remove the first and last item of the 'shrinkMe' array
 let shrinkMe = [ 1, 2, 3, 4 ]
@@ -61,7 +86,7 @@ let shrinkMe = [ 1, 2, 3, 4 ]
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 5 - ARRAY CONCAT
+//  EXERCISE 6 - ARRAY CONCAT
 //
 //  Concatenate arrays 'marysList' and 'johnsList' and save the result
 //  into 'mergedLists'
@@ -78,7 +103,7 @@ let mergedLists
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 6 - ARRAY LENGTH
+//  EXERCISE 7 - ARRAY LENGTH
 //
 //  Get the number of elements in 'getMyLength' and save the result into
 //  arrayLength
@@ -94,7 +119,7 @@ let arrayLength
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 7 - GET ELEMENT AT INDEX
+//  EXERCISE 8 - GET ELEMENT AT INDEX
 //
 //  Get the 'nthElement' element of 'getMyNthElement' and save the result into
 //  'arrayNthElement'
@@ -111,7 +136,7 @@ let arrayNthElement
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 8 - ARRAY SLICE
+//  EXERCISE 9 - ARRAY SLICE
 //
 //  Choosing the correct start and end indices, get a slice of 'getMySlice'
 //  and save the result into 'arraySlice' so that 'arraySlice' becomes:
@@ -128,7 +153,7 @@ let arraySlice
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 9 - ARRAY INSERT
+//  EXERCISE 10 - ARRAY INSERT
 //
 //  Insert multiple elements into the 'insertIntoMe' so that it looks like:
 //  [ "Well", "that", "was", "easy", "!" ]
@@ -145,7 +170,7 @@ let insertIntoMe = [ "Well", "easy", "!" ]
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 10 - ARRAY REMOVE
+//  EXERCISE 11 - ARRAY REMOVE
 //
 //  Delete multiple elements from the 'removeFromMe' array so that it looks like:
 //  [ "You", "know", "sometimes", "less", "is", "more" ]
@@ -162,7 +187,7 @@ let removeFromMe = [ "You", "know", "what", "they", "say", "sometimes", "less", 
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 11 - ARRAY INCLUDES
+//  EXERCISE 12 - ARRAY INCLUDES
 //
 //  Check if the 'breakfastList' array includes "bacon" and save the result
 //  into 'breakfastIncludesBacon'
@@ -179,7 +204,7 @@ let breakfastIncludesBacon
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 12 - ARRAY SORT ASCENDING
+//  EXERCISE 13 - ARRAY SORT ASCENDING
 //
 //  Sort the following 'sortMe' array in alphabetical order
 let sortMe = generateGroceryList()
@@ -194,7 +219,7 @@ let sortMe = generateGroceryList()
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 13 - ARRAY SORT DESCENDING
+//  EXERCISE 14 - ARRAY SORT DESCENDING
 //
 //  Sort the following 'sortAndReverseMe', then reverse it, so that the
 //  strings are sorted in descending order
@@ -212,7 +237,7 @@ let sortAndReverseMe = generateGroceryList()
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 14 - SPLIT STRING INTO AN ARRAY
+//  EXERCISE 15 - SPLIT STRING INTO AN ARRAY
 //
 //  Split the following 'splitMeIntoArray' string into an array, using the
 //  correct delimiter so that the array only contains the words of the sentence
@@ -229,7 +254,7 @@ let arrayFromSplitString
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 15 - JOIN ARRAY INTO A STRING
+//  EXERCISE 16 - JOIN ARRAY INTO A STRING
 //
 //  Join the following 'joinMeIntoString' array into a string, using the
 //  correct delimiter so that the string represents a valid IP Address
@@ -247,7 +272,7 @@ let stringFromJoinedArray
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 16 - ARRAY TIC TAC TOE
+//  EXERCISE 17 - ARRAY TIC TAC TOE
 //
 //  An array can contain an array as its elements, such an array is called
 //  a 2-Dimensional array. The variable 'ticTacToeArray' is a 2-Dimensional array
@@ -328,8 +353,8 @@ if (newArray !== undefined && newArray.length > 0 && Array.isArray(newArray)) {
 } else {
   console.log(incorrectMsg + "The initialized 'newArray' should be defined and have a length of more than 0, but yours looks like " + newArray)
 }
-console.log()
 totalTests++
+console.log()
 
 // Is Array
 let correctIsArray = Array.isArray(maybeAnArray)
@@ -339,8 +364,40 @@ if (isAnArray !== undefined && isAnArray === correctIsArray) {
 } else {
   console.log(incorrectMsg + "As for the variable 'maybeAnArray' being an array, this should be " + correctIsArray + " but you got " + isAnArray)
 }
-console.log()
 totalTests++
+console.log()
+
+// Array references
+let correctArray1n2 = [ "Not", "your", "average", "array" ]
+let correctArray3 = [ "Just", "your", "average", "copy" ]
+if (JSON.stringify(array1) === JSON.stringify(correctArray1n2) &&
+    JSON.stringify(array2) === JSON.stringify(correctArray1n2) &&
+    JSON.stringify(array3) === JSON.stringify(correctArray3)) {
+  console.log(correctMsg + "The references exercises yielded the following")
+  console.log("'array1' looks like:")
+  console.log(array1)
+  console.log("'array2' looks like:")
+  console.log(array2)
+  console.log("Notice how 'array1' and 'array2' are identical as they were assigned BY REFERENCE")
+  console.log("Meanwhile 'array3' looks like:")
+  console.log(array3)
+  console.log("Notice how it is its own array reference as it was assigned a DEEP COPY of 'array1'")
+  passedTests++
+} else {
+  console.log(incorrectMsg + "The references exercises yielded the following")
+  console.log("'array1' looks like:")
+  console.log(array1)
+  console.log("'array2' looks like:")
+  console.log(array2)
+  console.log("But they should look like")
+  console.log(correctArray1n2)
+  console.log("Meanwhile 'array3' looks like:")
+  console.log(array3)
+  console.log("But it should look like:")
+  console.log(correctArray3)
+}
+totalTests++
+console.log()
 
 // Array Push
 let correctGrowArray = [ "one", "two" ]
@@ -356,8 +413,8 @@ if (growMe !== undefined && JSON.stringify(growMe) === JSON.stringify(correctGro
   console.log("but you got:")
   console.log(growMe)
 }
-console.log()
 totalTests++
+console.log()
 
 // Array Shift
 let correctShrinkArray = [ 1, 2, 3, 4 ]
@@ -373,8 +430,8 @@ if (shrinkMe !== undefined && JSON.stringify(shrinkMe) === JSON.stringify(correc
   console.log("but you got:")
   console.log(shrinkMe)
 }
-console.log()
 totalTests++
+console.log()
 
 // Array Concat
 let correctMergedList = marysList.concat(johnsList)
@@ -388,8 +445,8 @@ if (mergedLists !== undefined && JSON.stringify(mergedLists) === JSON.stringify(
   console.log("but you got:")
   console.log(mergedLists)
 }
-console.log()
 totalTests++
+console.log()
 
 // Array Length
 let correctArrayLength = getMyLength.length
@@ -403,8 +460,8 @@ if (arrayLength !== undefined && arrayLength === correctArrayLength) {
   console.log(getMyLength)
   console.log("And the number of elements in the 'getMyLength' array should be " + correctArrayLength + " but you got " + arrayLength)
 }
-console.log()
 totalTests++
+console.log()
 
 // Array Get Nth Element
 let correctNthElement = getMyNthElement[nthElement-1]
@@ -418,8 +475,8 @@ if (arrayNthElement !== undefined && arrayNthElement === correctNthElement) {
   console.log(getMyNthElement)
   console.log("Element number " + nthElement + " in the 'getMyNthElement' array should be '" + correctNthElement + "' but you got '" + arrayNthElement + "'")
 }
-console.log()
 totalTests++
+console.log()
 
 // Array Slice
 let correctArraySlice = getMySlice.slice(2, 6)
@@ -433,8 +490,8 @@ if (arraySlice !== undefined && JSON.stringify(arraySlice) === JSON.stringify(co
   console.log("but you got:")
   console.log(arraySlice)
 }
-console.log()
 totalTests++
+console.log()
 
 // Array Insert
 let correctInsertedArray = [ "Well", "easy", "!" ]
@@ -449,8 +506,8 @@ if (insertIntoMe !== undefined && JSON.stringify(insertIntoMe) === JSON.stringif
   console.log("but you got:")
   console.log(insertIntoMe)
 }
-console.log()
 totalTests++
+console.log()
 
 // Array Remove
 let correctRemovedArray = [ "You", "know", "what", "they", "say", "sometimes", "less", "is", "more" ]
@@ -465,8 +522,8 @@ if (removeFromMe !== undefined && JSON.stringify(removeFromMe) === JSON.stringif
   console.log("but you got:")
   console.log(removeFromMe)
 }
-console.log()
 totalTests++
+console.log()
 
 // Array Includes
 let correctBreakfastIncludesBacon = breakfastList.includes("bacon")
@@ -476,8 +533,8 @@ if (breakfastIncludesBacon !== undefined && breakfastIncludesBacon === correctBr
 } else {
   console.log(incorrectMsg + "As for the variable 'breakfastList' including \"bacon\", this should be " + correctBreakfastIncludesBacon + " but you got " + breakfastIncludesBacon)
 }
-console.log()
 totalTests++
+console.log()
 
 // Array Sort
 let sortMeCopy = [ "Cherry", "Elderberry", "Fig", "Apple", "Durian", "Guava", "Banana" ]
@@ -492,8 +549,8 @@ if (sortMe !== undefined && JSON.stringify(sortMe) === JSON.stringify(sortMeCopy
   console.log("but you got:")
   console.log(sortMe)
 }
-console.log()
 totalTests++
+console.log()
 
 // Sort And Reverse
 let sortAndReverseMeCopy = [ "Cherry", "Elderberry", "Fig", "Apple", "Durian", "Guava", "Banana" ]
@@ -508,8 +565,8 @@ if (sortAndReverseMe !== undefined && JSON.stringify(sortAndReverseMe) === JSON.
   console.log("but you got:")
   console.log(sortAndReverseMe)
 }
-console.log()
 totalTests++
+console.log()
 
 // Split String Into Array
 let correctArrayFromSplitString = splitMeIntoArray.split(" ")
@@ -523,8 +580,8 @@ if (arrayFromSplitString !== undefined && JSON.stringify(arrayFromSplitString) =
   console.log("but you got:")
   console.log(arrayFromSplitString)
 }
-console.log()
 totalTests++
+console.log()
 
 // Join Array Into String
 let correctStringFromJoinArray = joinMeIntoString.join(".")
@@ -538,8 +595,8 @@ if (stringFromJoinedArray !== undefined && JSON.stringify(stringFromJoinedArray)
   console.log("but you got:")
   console.log(stringFromJoinedArray)
 }
-console.log()
 totalTests++
+console.log()
 
 // Array Tic Tac Toc
 let correctTicTacToeWinner = ticTacToeArray[0][0] === ticTacToeArray[1][1] === ticTacToeArray[2][2]
@@ -561,8 +618,8 @@ if (ticTacToeWinner !== undefined && ticTacToeWinner === correctTicTacToeWinner)
   console.log("]")
   console.log("And there being a diagonal winner should be " + correctTicTacToeWinner + " but you said " + ticTacToeWinner)
 }
-console.log()
 totalTests++
+console.log()
 
 // Final Test Tally Determination
 if (passedTests === totalTests) {
