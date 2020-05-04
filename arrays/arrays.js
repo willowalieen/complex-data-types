@@ -3,6 +3,7 @@
 //  EXERCISE 1 - INITALIZATION
 //
 //  Initialize the 'newArray' variable as any kind of non-empty array
+//  with at least one element in it
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
@@ -17,7 +18,7 @@ let newArray
 //  EXERCISE 2 - IS ARRAY
 //
 //  Check if 'maybeAnArray' is an array and save the result into 'isAnArray'
-let maybeAnArray = [ "definately", "an", "array" ]
+let maybeAnArray = generateRandomDataType()
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
@@ -29,25 +30,11 @@ let isAnArray
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 3 - ARRAY PUSH
+//  EXERCISE 3 - ARRAY UNSHIFT AND PUSH
 //
-//  Add the element "three" to the end of the 'pushMe' array
-let pushMe = [ "one", "two" ]
-//
-////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
-
-
-
-////////////////////////////////////////////////////////////////////////
-
-
-
-////////////////////////////////////////////////////////////////////////
-//
-//  EXERCISE 4 - ARRAY UNSHIFT
-//
-//  Add the element "one" to the beginning of the 'unshiftMe' array
-let unshiftMe = [ "two", "three" ]
+//  Add the element "zero" to the begining of the 'growMe' array and add
+//  the element "three" to the end of the 'growMe' array
+let growMe = [ "one", "two" ]
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
@@ -59,25 +46,10 @@ let unshiftMe = [ "two", "three" ]
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 5 - ARRAY POP
+//  EXERCISE 4 - ARRAY SHIFT AND POP
 //
-//  Remove the last item of the 'popMe' array
-    let popMe = [ 1, 2, 3, 4 ]
-//
-////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
-
-
-
-////////////////////////////////////////////////////////////////////////
-
-
-
-////////////////////////////////////////////////////////////////////////
-//
-//  EXERCISE 6 - ARRAY SHIFT
-//
-//  Remove the first item of the 'shiftMe' array
-    let shiftMe = [ "zero", "one", "two", "three" ]
+//  Remove the first and last item of the 'shrinkMe' array
+let shrinkMe = [ 1, 2, 3, 4 ]
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
@@ -89,16 +61,16 @@ let unshiftMe = [ "two", "three" ]
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 7 - ARRAY CONCAT
+//  EXERCISE 5 - ARRAY CONCAT
 //
-//  Concatenate arrays 'concatMe1' and 'concatMe2' and save the result
-//  into 'concatenatedArrays'
-    let concatMe1 = [ "Apple", "Banana", "Cherry", "Durian" ]
-    let concatMe2 = [ "Elderberry", "Fig", "Guava" ]
+//  Concatenate arrays 'marysList' and 'johnsList' and save the result
+//  into 'mergedLists'
+let marysList = [ "Apple", "Banana", "Cherry", "Durian" ]
+let johnsList = [ "Elderberry", "Fig", "Guava" ]
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let concatenatedArrays
+let mergedLists
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -106,11 +78,11 @@ let concatenatedArrays
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 8 - ARRAY LENGTH
+//  EXERCISE 6 - ARRAY LENGTH
 //
 //  Get the number of elements in 'getMyLength' and save the result into
 //  arrayLength
-    let getMyLength = [ "How", "many", "elements", "do", "I", "have", "?" ]
+let getMyLength = generateRandomLengthArray()
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
@@ -122,32 +94,16 @@ let arrayLength
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 9 - GET Nth ELEMENT
+//  EXERCISE 7 - GET ELEMENT AT INDEX
 //
-//  Get the 4th element of 'getMyFourthElement' and save the result into
-//  'arrayFourthElement'
-    let getMyFourthElement = [ "How", "many", "elements", "do", "I", "have", "?" ]
-//
-////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
-
-let arrayFourthElement
-
-////////////////////////////////////////////////////////////////////////
-
-
-
-////////////////////////////////////////////////////////////////////////
-//
-//  EXERCISE 10 - GET LAST ELEMENT
-//
-//  Get the last element of 'getMyLastElement' and save the result into
-//  'arrayLastElement' - WITHOUT modifying the original 'getMyLastElement'
-//  i.e. do not use pop()
-    let getMyLastElement = [ "How", "many", "elements", "do", "I", "have", "?" ]
+//  Get the 'nthElement' element of 'getMyNthElement' and save the result into
+//  'arrayNthElement'
+let getMyNthElement = [ "How", "many", "elements", "do", "I", "have", "?" ]
+let nthElement = generateRandomNumber(1, getMyNthElement.length)
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let arrayLastElement
+let arrayNthElement
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -155,12 +111,12 @@ let arrayLastElement
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 11 - ARRAY SLICE
+//  EXERCISE 8 - ARRAY SLICE
 //
 //  Choosing the correct start and end indices, get a slice of 'getMySlice'
 //  and save the result into 'arraySlice' so that 'arraySlice' becomes:
 //  [ "wood", "would", "a", "woodchuck" ]
-    let getMySlice = [ "How", "much", "wood", "would", "a", "woodchuck", "chuck", "?" ]
+let getMySlice = [ "How", "much", "wood", "would", "a", "woodchuck", "chuck", "?" ]
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
@@ -172,12 +128,12 @@ let arraySlice
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 12 - ARRAY INSERT
+//  EXERCISE 9 - ARRAY INSERT
 //
 //  Insert multiple elements into the 'insertIntoMe' so that it looks like:
 //  [ "Well", "that", "was", "easy", "!" ]
 //  Hint: Function is called splice()
-    let insertIntoMe = [ "Well", "easy", "!" ]
+let insertIntoMe = [ "Well", "easy", "!" ]
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
@@ -189,12 +145,12 @@ let arraySlice
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 13 - ARRAY REMOVE
+//  EXERCISE 10 - ARRAY REMOVE
 //
 //  Delete multiple elements from the 'removeFromMe' array so that it looks like:
-//  [ "You", "know", "less", "is", "more" ]
+//  [ "You", "know", "sometimes", "less", "is", "more" ]
 //  Hint: You should use the same function as array insert
-    let removeFromMe = [ "You", "know", "what", "they", "say", "sometimes", "less", "is", "more" ]
+let removeFromMe = [ "You", "know", "what", "they", "say", "sometimes", "less", "is", "more" ]
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
@@ -206,11 +162,11 @@ let arraySlice
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 14 - ARRAY INCLUDES
+//  EXERCISE 11 - ARRAY INCLUDES
 //
 //  Check if the 'breakfastList' array includes "bacon" and save the result
 //  into 'breakfastIncludesBacon'
-    let breakfastList = [ "milk", "eggs", "bacon", "orange juice" ]
+let breakfastList = generateRandomBreakfastList()
 //   NOTE: 'breakfastIncludesBacon' should be a boolean value of True or False
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
@@ -223,10 +179,10 @@ let breakfastIncludesBacon
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 15 - ARRAY SORT
+//  EXERCISE 12 - ARRAY SORT ASCENDING
 //
 //  Sort the following 'sortMe' array in alphabetical order
-    let sortMe = [ "Cherry", "Elderberry", "Fig", "Apple", "Durian", "Guava", "Banana" ]
+let sortMe = generateGroceryList()
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
@@ -238,11 +194,11 @@ let breakfastIncludesBacon
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 16 - ARRAY SORT AND REVERSE
+//  EXERCISE 13 - ARRAY SORT DESCENDING
 //
 //  Sort the following 'sortAndReverseMe', then reverse it, so that the
 //  strings are sorted in descending order
-    let sortAndReverseMe = [ "Cherry", "Elderberry", "Fig", "Apple", "Durian", "Guava", "Banana" ]
+let sortAndReverseMe = generateGroceryList()
 //  NOTE: Remember the dot notation expression1().expression2() turns the output
 //  of expression1 into the input of expression2
 //
@@ -256,12 +212,12 @@ let breakfastIncludesBacon
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 17 - SPLIT STRING INTO AN ARRAY
+//  EXERCISE 14 - SPLIT STRING INTO AN ARRAY
 //
 //  Split the following 'splitMeIntoArray' string into an array, using the
 //  correct delimiter so that the array only contains the words of the sentence
 //  with no spaces, and save the result into 'arrayFromSplitString'
-    let splitMeIntoArray = "The quick brown fox jumps over the lazy dog"
+let splitMeIntoArray = "The quick brown fox jumps over the lazy dog"
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
@@ -273,12 +229,12 @@ let arrayFromSplitString
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 18 - JOIN ARRAY INTO A STRING
+//  EXERCISE 15 - JOIN ARRAY INTO A STRING
 //
 //  Join the following 'joinMeIntoString' array into a string, using the
 //  correct delimiter so that the string represents a valid IP Address
 //  and save the result into 'stringFromJoinedArray'
-    let joinMeIntoString = [ 106, 162, 9, 2 ]
+let joinMeIntoString = [ 106, 162, 9, 2 ]
 //  NOTE: Example of valid IP Address: "10.9.123.9"
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
@@ -291,34 +247,30 @@ let stringFromJoinedArray
 
 ////////////////////////////////////////////////////////////////////////
 //
-//  EXERCISE 19 - ARRAY TIC TAC TOE
+//  EXERCISE 16 - ARRAY TIC TAC TOE
 //
 //  An array can contain an array as its elements, such an array is called
-//  a 2-Dimensional array. Make 'ticTacToeArray' be a 2-Dimensional array
-//  that reflects the following tic tac toe game state:
+//  a 2-Dimensional array. The variable 'ticTacToeArray' is a 2-Dimensional array
+//  that reflects the a tic tac toe game state:
+let ticTacToeArray = generateRandomTicTacToe()
+//  The 2-D Array returned here is EXACTLY how tic tac toe games online are programmed.
 //
-//  | X | O | O |
+//  Your objective is to determine if a player has won the game through this
+//  winning diagonal pattern:
+//  | * |   |   |
 //  |---|---|---|
-//  |   | X | O |
+//  |   | * |   |
 //  |---|---|---|
-//  |   | X | O |
+//  |   |   | * |
 //
-//  Use "X" and "O" uppercase for the x's and o's, and "" empty string for
-//  no move placed.
-//
-//  The 2-D Array you end up building, if correct, is EXACTLY how tic tac
-//  toe games online are programmed.
-//
-//  Here is an example of how the top row could look like:
-//  let ticTacToeArray = [
-//    [ "", "O", "X" ],
-//  ]
-//  Feel free to skip lines for your clarity, the variable is the same as far
-//  as the program is concerned when executed
+//  Write a boolean expression checking that ALL THREE OF THESE CELLS contain
+//  the same character and save the result into 'ticTacToeWinner'. "O" is
+//  used for the noughts player and "X" is used for the crosses player - but
+//  you don't really need that information.
 //
 ////////////////////// YOUR CODE BELOW THIS LINE ///////////////////////
 
-let ticTacToeArray
+let ticTacToeWinner
 
 ////////////////////////////////////////////////////////////////////////
 
@@ -361,6 +313,13 @@ let incorrectMsg = setRed + "Incorrect! " + resetColor
 let totalTests = 0
 let passedTests = 0
 
+console.log("+----------------------------------+")
+console.log("|                                  |")
+console.log("|       EXERCISE START HERE        |")
+console.log("|                                  |")
+console.log("+----------------------------------+")
+console.log()
+
 // Array Initialization
 if (newArray !== undefined && newArray.length > 0 && Array.isArray(newArray)) {
   console.log(correctMsg + "The 'newArray' array you initialized looks like: ")
@@ -384,80 +343,50 @@ console.log()
 totalTests++
 
 // Array Push
-let correctPushArray = [ "one", "two" ] //.push("three")
-correctPushArray.push("three")
-if (pushMe !== undefined && JSON.stringify(pushMe) === JSON.stringify(correctPushArray)) {
-  console.log(correctMsg + "After adding \"three\" to the end of 'pushMe', 'pushMe' is:")
-  console.log(pushMe)
+let correctGrowArray = [ "one", "two" ]
+correctGrowArray.unshift("zero")
+correctGrowArray.push("three")
+if (growMe !== undefined && JSON.stringify(growMe) === JSON.stringify(correctGrowArray)) {
+  console.log(correctMsg + "After adding \"three\" to the end of 'growMe', 'growMe' is:")
+  console.log(growMe)
   passedTests++
 } else {
-  console.log(incorrectMsg + "After adding \"three\" to the end of 'pushMe', 'pushMe' should be:")
-  console.log(correctPushArray)
+  console.log(incorrectMsg + "After adding \"three\" to the end of 'growMe', 'growMe' should be:")
+  console.log(correctGrowArray)
   console.log("but you got:")
-  console.log(pushMe)
-}
-console.log()
-totalTests++
-
-// Array Unshift
-let correctUnshiftArray = [ "two", "three" ]
-correctUnshiftArray.unshift("one")
-if (unshiftMe !== undefined && JSON.stringify(unshiftMe) === JSON.stringify(correctUnshiftArray)) {
-  console.log(correctMsg + "After adding \"one\" to the beginning of 'unshiftMe', 'unshiftMe' is:")
-  console.log(unshiftMe)
-  passedTests++
-} else {
-  console.log(incorrectMsg + "After adding \"one\" to beginning of 'unshiftMe', 'unshiftMe' should be:")
-  console.log(correctUnshiftArray)
-  console.log("but you got:")
-  console.log(unshiftMe)
-}
-console.log()
-totalTests++
-
-// Array Pop
-let correctPopArray = [ 1, 2, 3, 4 ]
-correctPopArray.pop()
-if (popMe !== undefined && JSON.stringify(popMe) === JSON.stringify(correctPopArray)) {
-  console.log(correctMsg + "After removing the last element from 'popMe', 'popMe' is:")
-  console.log(popMe)
-  passedTests++
-} else {
-  console.log(incorrectMsg + "After removing the last element from 'popMe', 'popMe' should be:")
-  console.log(correctPopArray)
-  console.log("but you got:")
-  console.log(popMe)
+  console.log(growMe)
 }
 console.log()
 totalTests++
 
 // Array Shift
-let correctShiftArray = [ "zero", "one", "two", "three" ]
-correctShiftArray.shift()
-if (shiftMe !== undefined && JSON.stringify(shiftMe) === JSON.stringify(correctShiftArray)) {
-  console.log(correctMsg + "After removing the first element from 'shiftMe', 'shiftMe' is:")
-  console.log(shiftMe)
+let correctShrinkArray = [ 1, 2, 3, 4 ]
+correctShrinkArray.shift()
+correctShrinkArray.pop()
+if (shrinkMe !== undefined && JSON.stringify(shrinkMe) === JSON.stringify(correctShrinkArray)) {
+  console.log(correctMsg + "After removing the first element from 'shrinkMe', 'shrinkMe' is:")
+  console.log(shrinkMe)
   passedTests++
 } else {
-  console.log(incorrectMsg + "After removing the first element from 'shiftMe', 'shiftMe' should be:")
-  console.log(correctShiftArray)
+  console.log(incorrectMsg + "After removing the first element from 'shrinkMe', 'shrinkMe' should be:")
+  console.log(correctShrinkArray)
   console.log("but you got:")
-  console.log(shiftMe)
+  console.log(shrinkMe)
 }
 console.log()
 totalTests++
 
 // Array Concat
-let correctConcatArray = concatMe1.concat(concatMe2)
-if (concatenatedArrays !== undefined && JSON.stringify(concatenatedArrays) === JSON.stringify(correctShiftArray)) {
-  console.log(correctMsg + "After concatenating 'concatMe1' and 'concatMe2', 'concatenatedArrays' is:")
-  console.log(concatenatedArrays)
+let correctMergedList = marysList.concat(johnsList)
+if (mergedLists !== undefined && JSON.stringify(mergedLists) === JSON.stringify(correctMergedList)) {
+  console.log(correctMsg + "After concatenating 'marysList' and 'johnsList', 'mergedLists' is:")
+  console.log(mergedLists)
   passedTests++
 } else {
-  console.log(incorrectMsg + "After concatenating 'concatMe1' and 'concatMe2', 'concatenatedArrays' should be:")
-  console.log(correctConcatArray)
+  console.log(incorrectMsg + "After concatenating 'marysList' and 'johnsList', 'mergedLists' should be:")
+  console.log(correctMergedList)
   console.log("but you got:")
-  console.log(concatenatedArrays)
+  console.log(mergedLists)
 }
 console.log()
 totalTests++
@@ -465,38 +394,29 @@ totalTests++
 // Array Length
 let correctArrayLength = getMyLength.length
 if (arrayLength !== undefined && arrayLength === correctArrayLength) {
-  console.log(correctMsg + "The number of elements in the 'getMyLength' array you got was: " + arrayLength)
+  console.log(correctMsg + "The 'getMyLength' array looked like:")
+  console.log(getMyLength)
+  console.log("And number of elements in the 'getMyLength' array you got was: " + arrayLength)
   passedTests++
 } else {
-  console.log(incorrectMsg + "The number of elements in the 'getMyLength' array should be " + correctArrayLength + " but you got " + arrayLength)
+  console.log(incorrectMsg + "The 'getMyLength' array looked like:")
+  console.log(getMyLength)
+  console.log("And the number of elements in the 'getMyLength' array should be " + correctArrayLength + " but you got " + arrayLength)
 }
 console.log()
 totalTests++
 
 // Array Get Nth Element
-let correctFourthElement = getMyFourthElement[3]
-if (arrayFourthElement !== undefined && arrayFourthElement === correctFourthElement) {
-  console.log(correctMsg + "The fourth element in the 'getMyFourthElement' array you got was: '" + arrayFourthElement + "'")
+let correctNthElement = getMyNthElement[nthElement-1]
+if (arrayNthElement !== undefined && arrayNthElement === correctNthElement) {
+  console.log(correctMsg + "The 'getMyNthElement' array looked like:")
+  console.log(getMyNthElement)
+  console.log("Element number " + nthElement + " in the 'getMyNthElement' array you got was: '" + arrayNthElement + "'")
   passedTests++
 } else {
-  console.log(incorrectMsg + "The fourth element in the 'getMyFourthElement' array should be '" + correctFourthElement + "' but you got '" + arrayFourthElement + "'")
-}
-console.log()
-totalTests++
-
-// Array Get Last Element
-let getMyLastElementCopy = [ "How", "many", "elements", "do", "I", "have", "?" ]
-let correctLastElement = getMyLastElementCopy[getMyLastElementCopy.length - 1]
-if (arrayLastElement !== undefined && arrayLastElement === correctLastElement && JSON.stringify(getMyLastElement) === JSON.stringify(getMyLastElementCopy)) {
-  console.log(correctMsg + "The last element in the 'getMyLastElement' array you got was '" + arrayLastElement + "', and you did not modify the original 'getMyLastElement' array")
-  console.log(concatenatedArrays)
-  passedTests++
-} else {
-  console.log(incorrectMsg + "The last element in the 'getMyLastElement' array should be '" + correctLastElement + "' but you got '" + arrayLastElement + "'")
-  console.log("If these are the same, the test failed because you modified the original 'getMyLastElement' array, it should look like:")
-  console.log(getMyLastElement)
-  console.log("and it looks like:")
-  console.log(getMyLastElementCopy)
+  console.log(incorrectMsg + "The 'getMyNthElement' array looked like:")
+  console.log(getMyNthElement)
+  console.log("Element number " + nthElement + " in the 'getMyNthElement' array should be '" + correctNthElement + "' but you got '" + arrayNthElement + "'")
 }
 console.log()
 totalTests++
@@ -622,20 +542,24 @@ console.log()
 totalTests++
 
 // Array Tic Tac Toc
-let correctTicTacToeArray = [
-  ["X", "O", "O"],
-  ["", "X", "O"],
-  ["", "X", "O"]
-]
-if (ticTacToeArray !== undefined && JSON.stringify(ticTacToeArray) === JSON.stringify(correctTicTacToeArray)) {
-  console.log(correctMsg + "The tic tac toe game array you made looks like:")
-  console.log(ticTacToeArray)
+let correctTicTacToeWinner = ticTacToeArray[0][0] === ticTacToeArray[1][1] === ticTacToeArray[2][2]
+if (ticTacToeWinner !== undefined && ticTacToeWinner === correctTicTacToeWinner) {
+  console.log(correctMsg + "The tic tac toe game array looks like:")
+  console.log("[")
+  console.log(ticTacToeArray[0])
+  console.log(ticTacToeArray[1])
+  console.log(ticTacToeArray[2])
+  console.log("]")
+  console.log("And you said there being a diagonal winner was " + ticTacToeWinner)
   passedTests++
 } else {
-  console.log(incorrectMsg + "The tic tac toe game array you made should look like:")
-  console.log(correctTicTacToeArray)
-  console.log("but you got:")
-  console.log(ticTacToeArray)
+  console.log(incorrectMsg + "The tic tac toe game array looks like:")
+  console.log("[")
+  console.log(ticTacToeArray[0])
+  console.log(ticTacToeArray[1])
+  console.log(ticTacToeArray[2])
+  console.log("]")
+  console.log("And there being a diagonal winner should be " + correctTicTacToeWinner + " but you said " + ticTacToeWinner)
 }
 console.log()
 totalTests++
@@ -645,4 +569,90 @@ if (passedTests === totalTests) {
   console.log(setGreen + "You passed " + passedTests + " / " + totalTests + " tests. Congratulations!" + resetColor)
 } else {
   console.log(setRed + "You passed " + passedTests + " / " + totalTests + " tests. Keep Going!" + resetColor)
+}
+
+
+
+//////////////////////////// END OF ANSWERS ////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////
+//
+//                           HELPER FUNCTIONS
+//
+//  FEEL FREE TO LOOK AT THIS SECTION
+//
+//  The following code generates some variables that you need to check.
+//  So you do not cheat, they generate them on a random basis that you
+//  cannot predict. So you cannot and must perform the exercises the
+//  right way. You can look at them though, they leverage conditionals
+//  (if - else) to generate the values used in the tests, and we will
+//  see conditionals in the 'Control Flows' chapter of this course
+//
+////////////////////////////////////////////////////////////////////////
+
+
+// generateRandomNumber returns a random number between min and max (included)
+// so that you cannot cheat and write boolean literals based on the exercise setup
+function generateRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min
+}
+
+// generateRandomDataType returns either a string or array randomly
+function generateRandomDataType() {
+  if (generateRandomNumber(0, 10) > 5) {
+    return [ "this", "is", "an", "array"]
+  }
+  return "This is not an array"
+}
+
+// generateRandomLengthArray randomizes a number and returns an array of
+// that length
+function generateRandomLengthArray() {
+  let length = generateRandomNumber(3, 7)
+  let newArray = [ "The", "numbers", ]
+  for (let i = 0; i < length; i++) {
+    newArray.push(generateRandomNumber(10, 100).toString())
+  }
+  newArray.push("are", "lucky")
+  return newArray
+}
+
+// generateRandomBreakfastList returns an array with either bacon included in it
+// or not
+function generateRandomBreakfastList() {
+  if (generateRandomNumber(0, 10) > 5) {
+    return [ "milk", "eggs", "bacon", "orange juice" ]
+  }
+  return [ "milk", "eggs", "orange juice" ]
+}
+
+// generateGroceryList returns a standard list of strings
+function generateGroceryList() {
+  return [ "Cherry", "Elderberry", "Fig", "Apple", "Durian", "Guava", "Banana" ]
+}
+
+// generateRandomTicTacToe returns one of two possible states of a tic tac toe
+// game randomly, one of them having the X player win with a diagonal line
+function generateRandomTicTacToe() {
+  if (generateRandomNumber(0, 10) > 5) {
+    if (generateRandomNumber(0, 10) > 5) {
+      return [
+        [ "X", "O", "O" ],
+        [ "", "X", "O" ],
+        [ "", "", "X" ]
+      ]
+    }
+    return [
+      [ "X", "O", "O" ],
+      [ "", "X", "O" ],
+      [ "", "", "X" ]
+    ]
+  }
+  return [
+    [ "X", "O", "X" ],
+    [ "", "O", "O" ],
+    [ "", "", "X" ]
+  ]
 }
