@@ -2,7 +2,7 @@
 //
 //  EXERCISE 1 - INITALIZATION
 //
-//  Map capabilities in javascript are implement using the Object data
+//  Mapping capabilities in javascript are implement using the Object data
 //  type. Initialize the 'newObject' variable with one key called "key"
 //  that has a value which is a string called "value", it should look like:
 //  {
@@ -299,7 +299,7 @@ let argonOnEarthLikeMars
 
 
 
-//////////////////////// END OF MAPS EXERCISES /////////////////////////
+/////////////////////// END OF OBJECTS EXERCISES ///////////////////////
 
 
 
@@ -343,7 +343,7 @@ console.log("|                                  |")
 console.log("+----------------------------------+")
 console.log()
 
-// Map Initialization
+// Object Initialization
 let correctNewObject = {
   key: "value",
 }
@@ -551,9 +551,8 @@ if (passedTests === totalTests) {
 ////////////////////////////////////////////////////////////////////////
 
 
-
 // generateRandomNumber returns a random number between min and max (included)
-// so that you cannot cheat and write boolean literals based on the exercise setup
+// so that you cannot cheat and return literals based on the exercise setup
 function generateRandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min
 }

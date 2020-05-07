@@ -117,7 +117,7 @@ top3Scores = None
 
 
 
-###################### END OF BOOLEANS EXERCISES #######################
+####################### END OF LISTS EXERCISES #########################
 
 
 
@@ -158,9 +158,9 @@ print("|                                  |")
 print("|       EXERCISE START HERE        |")
 print("|                                  |")
 print("+----------------------------------+")
-print("")
+print
 
-# Boolean Initialization
+# List Initialization
 if newList == None:
 	print(incorrectMsg + "The initialized 'newList' variable should be defined")
 elif type(newList) is list and len(newList) > 0:
@@ -171,7 +171,7 @@ else:
 	print(incorrectMsg + "'newList' should be an list with at least one element, yours looks like")
 	print(newList)
 totalTests += 1
-print("")
+print
 
 # List copy
 correctList1 = list(list1)
@@ -195,7 +195,7 @@ else:
 	print("It looks like")
 	print(list1)
 totalTests += 1
-print("")
+print
 
 # List round robin
 cycleMeCopy.append(cycleMeCopy.pop(0))
@@ -212,7 +212,7 @@ else:
 	print("but it looks like")
 	print(cycleMe)
 totalTests += 1
-print("")
+print
 
 # List clear for one reference
 if clearJustMe == None or keepMe == None:
@@ -232,7 +232,7 @@ else:
 	print(keepMe)
 	print("If ^ is empty, it means you cleared 'clearJustMe' and affected 'keepMe's reference")
 totalTests += 1
-print("")
+print
 
 # List clear for all references
 if clearAll == None or loseMe == None:
@@ -252,7 +252,7 @@ else:
 	print(loseMe)
 	print("If ^ is not empty but 'clearAll' is, it means you cleared 'clearAll' without affecting 'loseMe's reference")
 totalTests += 1
-print("")
+print
 
 # List to three scores
 correctTop3Scores = list(allScoresCopy)
@@ -272,6 +272,7 @@ else:
 	print(correctTop3Scores)
 	print("but you got:")
 	print(top3Scores)
+print
 
 # Final Test Tally Determination
 if passedTests == totalTests:
