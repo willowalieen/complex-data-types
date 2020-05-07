@@ -157,9 +157,9 @@ passedTests = 0
 
 # Add print statement so its easy to scroll to top of exercises
 print("+----------------------------------+")
-print("|								  |")
-print("|	   EXERCISE START HERE		|")
-print("|								  |")
+print("|                                  |")
+print("|       EXERCISES START HERE       |")
+print("|                                  |")
 print("+----------------------------------+")
 print("")
 
