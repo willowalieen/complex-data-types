@@ -23,8 +23,8 @@ newList = None
 #  list2, you will also edit list1 as its the same list.
 #  To avoid this, you need to make a copy of the list
 #  The below 'list1' looks like:
-list1 = [ "This", "is", "an", "list" ]
-#  Save a copy of 'list1' into 'listCopy', and then append 'appendMe':
+list1 = [ "This", "is", "a", "list" ]
+#  Save a copy of 'list1' into 'listCopy', and then append 'appendElement':
 appendElement = "ok?"
 #  to the end of 'listCopy'
 #  'list1' should remain unchanged
@@ -174,8 +174,8 @@ totalTests += 1
 print
 
 # List copy
-correctList1 = list(list1)
-correctListCopy = list(list1)
+correctList1 = [ "This", "is", "a", "list" ]
+correctListCopy = list(correctList1)
 correctListCopy.append(appendElement)
 if listCopy == None:
 	print(incorrectMsg + "The initialized 'listCopy' variable should be defined")
