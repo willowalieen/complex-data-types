@@ -16,5 +16,5 @@ echo
 echo "Javascript Objects"
 node maps/objects.js
 echo
-echo "Python Numbers"
+echo "Python Dictionaries"
 python maps/dictionaries.py
