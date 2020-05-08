@@ -275,7 +275,7 @@ let stringFromJoinedArray
 //
 //  An array can contain an array as its elements, such an array is called
 //  a 2-Dimensional array. The variable 'ticTacToeArray' is a 2-Dimensional array
-//  that reflects the a tic tac toe game state:
+//  that reflects a tic tac toe game state:
 let ticTacToeArray = generateRandomTicTacToe()
 //  The 2-D Array returned here is EXACTLY how tic tac toe games online are programmed.
 //
@@ -403,11 +403,11 @@ let correctGrowArray = [ "one", "two" ]
 correctGrowArray.unshift("zero")
 correctGrowArray.push("three")
 if (growMe !== undefined && JSON.stringify(growMe) === JSON.stringify(correctGrowArray)) {
-  console.log(correctMsg + "After adding \"three\" to the end of 'growMe', 'growMe' is:")
+  console.log(correctMsg + "After adding \"zero\" to the beginning and \"three\" to the end of 'growMe', 'growMe' is:")
   console.log(growMe)
   passedTests++
 } else {
-  console.log(incorrectMsg + "After adding \"three\" to the end of 'growMe', 'growMe' should be:")
+  console.log(incorrectMsg + "After adding \"zero\" to the beginning and \"three\" to the end of 'growMe', 'growMe' should be:")
   console.log(correctGrowArray)
   console.log("but you got:")
   console.log(growMe)
@@ -598,7 +598,7 @@ totalTests++
 console.log()
 
 // Array Tic Tac Toc
-let correctTicTacToeWinner = ticTacToeArray[0][0] === ticTacToeArray[1][1] === ticTacToeArray[2][2]
+let correctTicTacToeWinner = ticTacToeArray[0][0] === ticTacToeArray[1][1] && ticTacToeArray[0][0] === ticTacToeArray[2][2] && ticTacToeArray[0][0] !== ""
 if (ticTacToeWinner !== undefined && ticTacToeWinner === correctTicTacToeWinner) {
   console.log(correctMsg + "The tic tac toe game array looks like:")
   console.log("[")
@@ -689,26 +689,27 @@ function generateGroceryList() {
   return [ "Cherry", "Elderberry", "Fig", "Apple", "Durian", "Guava", "Banana" ]
 }
 
-// generateRandomTicTacToe returns one of two possible states of a tic tac toe
-// game randomly, one of them having the X player win with a diagonal line
+// generateRandomTicTacToe returns one of three possible states of a tic tac toe
+// game randomly, one of them having the X player win with a diagonal line, and
+// other two with neither player winning
 function generateRandomTicTacToe() {
   if (generateRandomNumber(0, 10) > 5) {
     if (generateRandomNumber(0, 10) > 5) {
       return [
-        [ "X", "O", "O" ],
-        [ "", "X", "O" ],
-        [ "", "", "X" ]
-      ]
+				[ "X", "O", "X" ],
+				[ "", "O", "O" ],
+				[ "", "", "X" ]
+			]
     }
     return [
-      [ "X", "O", "O" ],
       [ "", "X", "O" ],
-      [ "", "", "X" ]
+      [ "X", "", "X" ],
+      [ "O", "O", "" ]
     ]
-  }
-  return [
-    [ "X", "O", "X" ],
-    [ "", "O", "O" ],
-    [ "", "", "X" ]
-  ]
+	}
+	return [
+		[ "X", "O", "O" ],
+		[ "", "X", "O" ],
+		[ "", "", "X" ]
+	]
 }
