@@ -265,6 +265,7 @@ elif type(top3Scores) is list and top3Scores == correctTop3Scores:
 	print(allScoresCopy)
 	print("and the the top 3 scores you saved into 'top3Scores' were:")
 	print(top3Scores)
+	passedTests += 1
 else:
 	print(incorrectMsg + "The scores were: ")
 	print(allScoresCopy)
@@ -272,6 +273,7 @@ else:
 	print(correctTop3Scores)
 	print("but you got:")
 	print(top3Scores)
+totalTests += 1
 print
 
 # Final Test Tally Determination
