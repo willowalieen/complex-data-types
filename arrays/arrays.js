@@ -339,7 +339,7 @@ let passedTests = 0
 
 console.log("+----------------------------------+")
 console.log("|                                  |")
-console.log("|       EXERCISE START HERE        |")
+console.log("|       EXERCISES START HERE       |")
 console.log("|                                  |")
 console.log("+----------------------------------+")
 console.log()

@@ -179,7 +179,7 @@ else:
 	print("but yours looks like:")
 	print(json.dumps(newDict, indent=2))
 totalTests += 1
-print
+print("")
 
 # Get My Age
 correctDOB = datetime.date(getMyAge["DOB"]["year"], getMyAge["DOB"]["month"], getMyAge["DOB"]["day"])
@@ -204,7 +204,7 @@ else:
 	print(str(correctgAgeInMonths) + " months old but you said they were " + str(ageInMonths) + " months old")
 	print(str(correctAgeInYears) + " years old but you said they were " + str(ageInYears) + " years old")
 totalTests += 1
-print
+print("")
 
 # Dict Deep Copy
 correctDeepDictionaryCopy = {
@@ -233,7 +233,7 @@ else:
 	print("but it looks like:")
 	print(json.dumps(deepDictionaryCopy, indent=2))
 totalTests += 1
-print
+print("")
 
 # Dict Manipulation
 studentCopy["grade"] += 1
@@ -255,7 +255,7 @@ else:
 	print("but yours looks like:")
 	print(json.dumps(student, indent=2))
 totalTests += 1
-print
+print("")
 
 # Final Test Tally Determination
 if passedTests == totalTests:

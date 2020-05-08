@@ -6,7 +6,7 @@ echo "Javascript Arrays"
 node arrays/arrays.js
 echo
 echo "Python Lists"
-python arrays/lists.py
+python3 arrays/lists.py
 
 echo
 echo
@@ -17,4 +17,4 @@ echo "Javascript Objects"
 node maps/objects.js
 echo
 echo "Python Dictionaries"
-python maps/dictionaries.py
+python3 maps/dictionaries.py
