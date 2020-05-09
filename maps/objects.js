@@ -492,7 +492,7 @@ console.log()
 
 // Deep object 2
 let correctDistanceFromOrigin = Math.round(Math.sqrt(solarSystem.properties.location.x**2 + solarSystem.properties.location.y**2 + solarSystem.properties.location.z**2))
-let correctSizeInAUs = Math.round(100 * solarSystem.properties.size / solarSystem.properties.planets[2].distance) / 100
+let correctSizeInAUs = (solarSystem.properties.size / solarSystem.properties.planets[2].distance).toFixed(2)
 let correctArgonOnEarthLikeMars = solarSystem.properties.planets[2].atmosphere.argon === solarSystem.properties.planets[3].atmosphere.argon
 
 if (distanceFromOrigin !== undefined && sizeInAUs !== undefined && argonOnEarthLikeMars !== undefined &&
