@@ -20,9 +20,8 @@ newDict = None
 #
 #  EXERCISE 2 - GET MY AGE
 #
-#  The 'getMyAge' dictionary contains my date of birth stored as the python
-#  datetime data type. There is nothing complicated about this data type, in
-#  fact this data type makes life much easier when working with date:
+#  The 'getMyAge' dictionary contains my date of birth stored as year, month
+#  and day.
 import random
 getMyAge = {
 	"name": "John Nnamchi",
@@ -37,6 +36,8 @@ getMyAge = {
 #  determine how old this person is in days, months and years saved into
 #  'ageInDays', 'ageInMonths' and 'ageInYears' respectively
 #  Hint: The solution requires the inbuilt datetime module imported below
+#  There is nothing complicated about this data type, in
+#  fact this data type makes life much easier when working with date:
 import datetime
 #
 ###################### YOUR CODE BELOW THIS LINE #######################
