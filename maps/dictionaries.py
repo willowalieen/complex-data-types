@@ -185,7 +185,7 @@ print("")
 # Get My Age
 correctDOB = datetime.date(getMyAge["DOB"]["year"], getMyAge["DOB"]["month"], getMyAge["DOB"]["day"])
 correctAgeInDays = (datetime.date.today() - correctDOB).days
-correctgAgeInMonths = correctAgeInDays / 12
+correctgAgeInMonths = correctAgeInDays / 30
 correctAgeInYears = correctAgeInDays / 365
 if ageInDays == None or ageInMonths == None or ageInYears == None:
 	print(incorrectMsg + "The initialized 'ageInDays', 'ageInMonths' and 'ageInYeaars' variables should all be defined")
