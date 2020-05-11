@@ -420,11 +420,11 @@ let correctShrinkArray = [ 1, 2, 3, 4 ]
 correctShrinkArray.shift()
 correctShrinkArray.pop()
 if (shrinkMe !== undefined && JSON.stringify(shrinkMe) === JSON.stringify(correctShrinkArray)) {
-	console.log(correctMsg + "After removing the first element from 'shrinkMe', 'shrinkMe' is:")
+	console.log(correctMsg + "After removing the first and last elements of 'shrinkMe', 'shrinkMe' is:")
 	console.log(shrinkMe)
 	passedTests++
 } else {
-	console.log(incorrectMsg + "After removing the first element from 'shrinkMe', 'shrinkMe' should be:")
+	console.log(incorrectMsg + "After removing the first and last elements of 'shrinkMe', 'shrinkMe' should be:")
 	console.log(correctShrinkArray)
 	console.log("but you got:")
 	console.log(shrinkMe)
